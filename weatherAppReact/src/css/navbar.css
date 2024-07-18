@@ -1,0 +1,9 @@
+.navbar{
+   margin: 0;
+   padding: 0;
+    background-color: rgb(62, 23, 80); 
+}
+.navbar-ul{
+    display:flex;
+    justify-content: space-between;
+}
