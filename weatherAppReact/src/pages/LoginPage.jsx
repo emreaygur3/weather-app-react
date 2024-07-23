@@ -2,6 +2,7 @@ import React from 'react';
 import LoginForm from '../components/LoginForm';
 import { getUsers } from '../utils/LocalStorage';
 import { Link } from 'react-router-dom';
+import '../css/general.css'
 
 const LoginPage = ({ onLogin }) => {
   const handleLogin = (credentials, setError) => {
@@ -15,10 +16,10 @@ const LoginPage = ({ onLogin }) => {
   };
 
   return (
-    <div>
-      <h1>Login</h1>
+    <div className='login-container'>
+      <h1 className='login-header'>Login</h1>
       <LoginForm onLogin={handleLogin} />
-      <p>Don't have an account? <Link to="/register">Register here</Link></p>
+      <p>Don't have an account? <Link className='register-link' to="/register">Register here</Link></p>
     </div>
   );
 };

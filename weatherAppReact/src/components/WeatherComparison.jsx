@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-
+import '../css/WeatherPage.css'; 
 const cities = [
   { name: 'Istanbul', lat: 41.0082, lon: 28.9784 },
   { name: 'Ankara', lat: 39.9334, lon: 32.8597 },
@@ -19,7 +19,7 @@ const WeatherComparison = ({ isCelsius }) => {
 
   useEffect(() => {
     const fetchWeatherData = async () => {
-      const apiKey = 'e24e3522f1b728a0f81048a30a41a7da';
+      const apiKey = import.meta.env.VITE_API_KEY;
       try {
         const promises = cities.map(city =>
           fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${city.lat}&lon=${city.lon}&appid=${apiKey}&units=metric`)
@@ -49,7 +49,7 @@ const WeatherComparison = ({ isCelsius }) => {
   };
 
   return (
-    <div>
+    <div className="top-cities">
       <h2>Top 5 Hottest Cities in Turkey</h2>
       {error && <p>{error}</p>}
       <ul>

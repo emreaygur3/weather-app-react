@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
-import HomePage from './pages/HomePage';
+import { Routes, Route, useNavigate, Navigate } from 'react-router-dom';
 import LoginPage from './pages/LoginPage';
 import RegisterPage from './pages/RegisterPage';
 import WeatherPage from './pages/WeatherPage';
 import Navbar from './components/Navbar';
+import ProtectedRoute from './components/ProtectedRoute';
+import ExcelPage from './pages/ExcelPage';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -35,12 +36,27 @@ function App() {
 
   return (
     <div>
-      <Navbar isAuthenticated={isAuthenticated} onLogout={handleLogout} />
+      <Navbar isAuthenticated={isAuthenticated} onLogout={handleLogout} currentUser={currentUser} />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<LoginPage onLogin={handleLogin} />} />
         <Route path="/register" element={<RegisterPage />} />
-        <Route path="/weather" element={<WeatherPage currentUser={currentUser} />} />
+        <Route
+          path="/weather"
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <WeatherPage currentUser={currentUser} />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/excel"
+          element={
+            <ProtectedRoute isAuthenticated={isAuthenticated}>
+              <ExcelPage currentUser={currentUser} />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
     </div>
   );

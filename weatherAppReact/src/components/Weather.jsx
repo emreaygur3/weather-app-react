@@ -34,13 +34,14 @@ const Weather = ({ onToggleUnit, isCelsius }) => {
   };
 
   const handleSearch = async () => {
+    const apiKey = import.meta.env.VITE_API_KEY;
     if (searchType === 'city' && city) {
       const query = `city=${city}`;
-      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=e24e3522f1b728a0f81048a30a41a7da&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
       fetchWeather(query, url);
     } else if (searchType === 'coordinates' && latitude && longitude) {
       const query = `lat=${latitude}&lon=${longitude}`;
-      const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=e24e3522f1b728a0f81048a30a41a7da&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
       fetchWeather(query, url);
     } else {
       setError('Please provide valid input');
@@ -52,17 +53,19 @@ const Weather = ({ onToggleUnit, isCelsius }) => {
   };
 
   useEffect(() => {
+    const apiKey = import.meta.env.VITE_API_KEY;
     const handleSuccess = (position) => {
       const { latitude, longitude } = position.coords;
       const query = `lat=${latitude}&lon=${longitude}`;
-      const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=e24e3522f1b728a0f81048a30a41a7da&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
       fetchWeather(query, url);
     };
 
     const handleError = () => {
+      const apiKey = import.meta.env.VITE_API_KEY;
       const randomCoordinates = getRandomCoordinates();
       const query = `lat=${randomCoordinates.lat}&lon=${randomCoordinates.lon}`;
-      const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${randomCoordinates.lat}&lon=${randomCoordinates.lon}&appid=e24e3522f1b728a0f81048a30a41a7da&units=metric`;
+      const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${randomCoordinates.lat}&lon=${randomCoordinates.lon}&appid=${apiKey}&units=metric`;
       fetchWeather(query, url);
     };
 
@@ -97,7 +100,7 @@ const Weather = ({ onToggleUnit, isCelsius }) => {
         </label>
       </div>
       {searchType === 'city' ? (
-        <div>
+        <div className='weather-cityinput'>
           <input
             type="text"
             placeholder="Enter city name"
@@ -106,7 +109,7 @@ const Weather = ({ onToggleUnit, isCelsius }) => {
           />
         </div>
       ) : (
-        <div>
+        <div className='weather-numberinputs'>
           <input
             type="number"
             placeholder="Enter latitude"

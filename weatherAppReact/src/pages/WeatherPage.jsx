@@ -2,13 +2,14 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Weather from '../components/Weather';
 import WeatherComparison from '../components/WeatherComparison';
+import '../css/WeatherPage.css'; 
 
 const WeatherPage = ({ currentUser }) => {
   const navigate = useNavigate();
   const [isCelsius, setIsCelsius] = useState(true);
 
-  const handleBackToLogin = () => {
-    navigate('/login');
+  const handleGoExcel = () => {
+    navigate('/excel');
   };
 
   const toggleUnit = () => {
@@ -16,12 +17,18 @@ const WeatherPage = ({ currentUser }) => {
   };
 
   return (
-    <div>
-      <h1>Weather</h1>
-      {currentUser && <p>Welcome, {currentUser.email}!</p>}
-      <Weather isCelsius={isCelsius} onToggleUnit={toggleUnit} />
-      <WeatherComparison isCelsius={isCelsius} />
-      <button onClick={handleBackToLogin}>Back to Login</button>
+    <div className="weather-container">
+      <h1 className='pageHeader'>Welcome to Weather Page</h1>
+      <div className="weather-content">
+        <div className="card">
+          <Weather isCelsius={isCelsius} onToggleUnit={toggleUnit} />
+          <label>You can use excel as a source</label>
+          <button className="excel-button" onClick={handleGoExcel}>Excel</button>
+        </div>
+        <div className="top-cities-card">
+          <WeatherComparison isCelsius={isCelsius} />
+        </div>
+      </div>
     </div>
   );
 };

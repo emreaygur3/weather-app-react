@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
+import '../css/general.css'
 
 const RegisterForm = ({ onRegister }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [repassword, setRepassword] =useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (email && password) {
-      onRegister({ email, password });
-    } else {
+    if (email && password && repassword) 
+      {
+        if(password ===repassword){
+          onRegister({ email, password ,repassword });
+        } else {
+          alert('Password and Repassword is not same')
+        }
+      } else {
       alert('Please fill in all fields');
     }
   };
@@ -17,7 +24,7 @@ const RegisterForm = ({ onRegister }) => {
     <form onSubmit={handleSubmit}>
       <div>
         <label>Email:</label>
-        <input 
+        <input className='register-emailinput'
           type="email" 
           value={email} 
           onChange={(e) => setEmail(e.target.value)} 
@@ -25,13 +32,21 @@ const RegisterForm = ({ onRegister }) => {
       </div>
       <div>
         <label>Password:</label>
-        <input 
+        <input  className='register-passwordinput'
           type="password" 
           value={password} 
           onChange={(e) => setPassword(e.target.value)} 
+        /> 
+        </div>
+        <div className='repassword-div'>
+        <label>Repassword:</label>
+          <input  className='register-repasswordinput'
+          type="password" 
+          value={repassword} 
+          onChange={(e) => setRepassword(e.target.value)} 
         />
       </div>
-      <button type="submit">Register</button>
+      <button className='register-loginbutton' type="submit">Register</button>
     </form>
   );
 };

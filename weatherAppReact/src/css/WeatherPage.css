@@ -1,0 +1,154 @@
+/* Genel Sayfa Stili */
+body {
+  font-family: Arial, sans-serif;
+  background: url('../images/beautiful-cloud-background-17388-17946-hd-wallpapers-1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+.pageHeader{
+height: 30px;
+margin-top: 170px;
+margin-left: 36%;
+color: rgba(0, 0, 0, 0.844);
+}
+
+/* Weather Container Stili */
+.weather-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+
+/* Card ve İçerik Düzenleme */
+.weather-content {
+  
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.weather-cityinput{
+  width: 50%;
+  margin-left: 22%;
+}
+.weather-numberinputs{
+  width: 50%;
+  margin-left: 22%;
+}
+
+.card {
+  background-color: rgba(255, 255, 255, 0.5); /* Transparan arka plan */
+  padding: 20px;
+  margin: 10px;
+  margin-left: 4%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  text-align: center;
+}
+
+.card h2 {
+  margin: 0;
+  color: #333;
+}
+
+.card p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.card .temp {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+}
+
+.card .description {
+  font-style: italic;
+  color: #666;
+}
+
+.card .location {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Input Stili */
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Transparan arka plan */
+}
+
+/* Buton Stili */
+button {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Excel Button Stili */
+.excel-button {
+  background-color: #ff9800;
+}
+
+.excel-button:hover {
+  background-color: #e68900;
+}
+
+/* Top 5 Hottest Cities Stili */
+.top-cities {
+  background-color: rgba(255, 255, 255, 0.5); /* Transparan arka plan */
+  padding: 25px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 50%;
+  margin-left: 22%;
+}
+
+.top-cities h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.top-cities ul {
+  list-style: none;
+  padding: 0;
+}
+
+.top-cities li {
+  font-size: 1.2em;
+  margin: 5px 0;
+  color: #555;
+}
+
+.top-cities-card{
+  background-color: rgba(255, 255, 255, 0.5); /* Transparan arka plan */
+  padding: 20px;
+  margin: 10px;
+  margin-right: 4%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 40%;
+  text-align: center;
+}

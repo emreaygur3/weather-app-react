@@ -1,0 +1,117 @@
+.login-container{
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin: 13% 34%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparan arka plan */
+}
+.register-container{
+    border-radius: 7px;
+    margin: 13% 34%;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparan arka plan */
+}
+.email-input{
+    width: auto;
+    margin-left: 30px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #4CAF50
+}
+.register-emailinput{
+    width: auto;
+    margin-left: 49px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #4CAF50
+}
+
+.password-input{
+    width: auto;
+    margin-left: 1px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #4CAF50
+}
+.register-passwordinput{
+    width: auto;
+    margin-left: 19px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #4CAF50
+}
+.register-repasswordinput{
+    width: auto;
+    margin-left: 1px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: #4CAF50 
+}
+
+
+
+.login-button{
+    background-color: #4CAF50; /* Yeşil arka plan rengi */
+    border: none; /* Kenarlık yok */
+    color: white; /* Beyaz yazı rengi */
+    padding: 10px 18px; /* İçerik boşlukları */
+    text-align: center; /* Metin hizalaması */
+    text-decoration: none; /* Metin altı çizgisi yok */
+    display: inline-block; /* Blok içi öğe */
+    font-size: 16px; /* Yazı boyutu */
+    margin: 10px 100px; /* Dış boşluklar */
+    cursor: pointer; /* Fare işaretçisi */
+    border-radius: 5px; /* Yuvarlak köşeler */
+    transition: background-color 0.3s; /* Arka plan rengi geçişi */
+}
+
+.register-loginbutton{
+    background-color: #4CAF50; /* Yeşil arka plan rengi */
+    border: none; /* Kenarlık yok */
+    color: white; /* Beyaz yazı rengi */
+    padding: 10px 18px; /* İçerik boşlukları */
+    text-align: center; /* Metin hizalaması */
+    text-decoration: none; /* Metin altı çizgisi yok */
+    display: inline-block; /* Blok içi öğe */
+    font-size: 16px; /* Yazı boyutu */
+    margin: 10px 100px; /* Dış boşluklar */
+    cursor: pointer; /* Fare işaretçisi */
+    border-radius: 5px; /* Yuvarlak köşeler */
+    transition: background-color 0.3s; /* Arka plan rengi geçişi */
+}
+
+.login-button:hover {
+    background-color: #45a049; /* Hover durumunda daha koyu yeşil */
+  }
+ 
+.register-loginbutton:hover{
+    background-color: #45a049;
+}
+
+.register-link{
+    color: rgb(167, 19, 216);
+}
+.login-header{
+    color: rgb(152, 187, 117);
+    font-weight: 650;
+   
+}
+.register-header{
+    color: rgb(152, 187, 117);
+    font-weight: 650;
+}
