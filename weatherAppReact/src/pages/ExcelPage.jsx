@@ -78,7 +78,7 @@ function ExcelPage() {
 
   return (
     <div className="excel-container">
-      <h1 className='excel-h1'>Downloader</h1> 
+      
       <input className='excel-input' type="file" accept=".xlsx,.xls" onChange={handleFileUpload} />
       <h2 className='excel-h2'>File Outputs</h2>
       {error && <p>{error}</p>}

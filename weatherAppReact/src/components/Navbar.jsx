@@ -5,7 +5,7 @@ import '../css/navbar.css';
 const Navbar = ({ isAuthenticated, onLogout, currentUser }) => (
   <div className="navbar">
     <div>
-      {isAuthenticated && <Link to="/weather">Weather</Link>}
+      {isAuthenticated && <Link to="/weather">Quick Weather</Link>}
     </div>
     <div>
       {isAuthenticated ? (

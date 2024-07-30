@@ -1,4 +1,3 @@
-/* Genel Sayfa Stili */
 body {
   font-family: Arial, sans-serif;
   background: url('../images/beautiful-cloud-background-17388-17946-hd-wallpapers-1.jpg') no-repeat center center fixed;
@@ -6,14 +5,14 @@ body {
   margin: 0;
   padding: 0;
 }
-.pageHeader{
-height: 30px;
-margin-top: 170px;
-margin-left: 36%;
-color: rgba(0, 0, 0, 0.844);
+
+.pageHeader {
+  height: 30px;
+  margin-top: 170px;
+  margin-left: 36%;
+  color: rgba(0, 0, 0, 0.844);
 }
 
-/* Weather Container Stili */
 .weather-container {
   display: flex;
   flex-direction: column;
@@ -21,24 +20,19 @@ color: rgba(0, 0, 0, 0.844);
   width: 100%;
 }
 
-/* Card ve İçerik Düzenleme */
 .weather-content {
-  
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.weather-cityinput{
-  width: 50%;
-  margin-left: 22%;
-}
-.weather-numberinputs{
+
+.weather-cityinput, .weather-numberinputs {
   width: 50%;
   margin-left: 22%;
 }
 
 .card {
-  background-color: rgba(255, 255, 255, 0.5); /* Transparan arka plan */
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   margin: 10px;
   margin-left: 4%;
@@ -75,17 +69,15 @@ color: rgba(0, 0, 0, 0.844);
   color: #333;
 }
 
-/* Input Stili */
 input[type="text"], input[type="number"] {
   padding: 10px;
   margin: 10px 0;
   border: 1px solid #ccc;
   border-radius: 5px;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.5); /* Transparan arka plan */
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
-/* Buton Stili */
 button {
   background-color: #4CAF50;
   color: white;
@@ -105,7 +97,6 @@ button:hover {
   background-color: #45a049;
 }
 
-/* Excel Button Stili */
 .excel-button {
   background-color: #ff9800;
 }
@@ -114,9 +105,8 @@ button:hover {
   background-color: #e68900;
 }
 
-/* Top 5 Hottest Cities Stili */
 .top-cities {
-  background-color: rgba(255, 255, 255, 0.5); /* Transparan arka plan */
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 25px;
   margin: 10px;
   border-radius: 10px;
@@ -142,8 +132,8 @@ button:hover {
   color: #555;
 }
 
-.top-cities-card{
-  background-color: rgba(255, 255, 255, 0.5); /* Transparan arka plan */
+.top-cities-card {
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 20px;
   margin: 10px;
   margin-right: 4%;
@@ -151,4 +141,31 @@ button:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   width: 40%;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  .pageHeader {
+      margin-top: 100px;
+      margin-left: 20%;
+      font-size: 1.5em;
+  }
+
+  .weather-container {
+      align-items: center;
+  }
+
+  .weather-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .card, .top-cities {
+      width: 90%;
+      margin-left: 5%;
+  }
+
+  .weather-cityinput, .weather-numberinputs {
+      width: 90%;
+      margin-left: 5%;
+  }
 }

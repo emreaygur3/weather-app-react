@@ -18,7 +18,7 @@ const WeatherPage = ({ currentUser }) => {
 
   return (
     <div className="weather-container">
-      <h1 className='pageHeader'>Welcome to Weather Page</h1>
+      <h1 className='pageHeader'>Welcome to Quick Weather</h1>
       <div className="weather-content">
         <div className="card">
           <Weather isCelsius={isCelsius} onToggleUnit={toggleUnit} />

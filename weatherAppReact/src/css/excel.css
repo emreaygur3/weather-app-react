@@ -1,67 +1,78 @@
+.excel-container {
+  padding: 20px;
+  margin-top: 60px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
- .excel-container {
-    padding: 20px;
-    margin-top: 60px; 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    
+.excel-h1 {
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.844);
+}
+
+.excel-input[type="file"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.excel-h2 {
+  color: rgba(0, 0, 0, 0.844);
+}
+
+.excel-ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.excel-li {
+  background-color: #ffffff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+.excel-input {
+  background-color: #767676;
+  color: rgb(23, 7, 7);
+  border: none;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.excel-input:hover {
+  background-color: #bfc4bf;
+}
+
+@media (max-width: 768px) {
+  .excel-container {
+      padding: 10px;
+      margin-top: 30px;
   }
   
-  .excel-h1{
-    font-size: 2em;
-    color: rgba(0, 0, 0, 0.844);
-    
+  .excel-h1 {
+      font-size: 1.5em;
   }
-  .excel-input[type="file"]{
-    /* margin: 5px 0; */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-  }
-  .excel-h2{
-    color: rgba(0, 0, 0, 0.844);
-  }
-  
-  .excel-ul{
-    list-style-type: none;
-    padding: 0;
-  }
- .excel-li{
-    background-color: #ffffff;
-    padding: 10px;
-    margin: 5px 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
- }
 
- 
+  .excel-li {
+      max-width: 100%;
+  }
+
   .excel-input {
-    background-color: #767676;
-    color: rgb(23, 7, 7);
-    border: none;
-    padding: 15px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 10px 2px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+      padding: 10px 15px;
+      font-size: 14px;
   }
-  
- .excel-input:hover {
-    background-color: #bfc4bf;
-  }
-   
-/* .listofexcel{
-  padding: 4px;
-  background-color: white;
-  color: rgb(75, 75, 75);
-} */
-  
+}
